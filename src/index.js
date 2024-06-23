@@ -19,11 +19,6 @@ io.on('connection', async (socket) => {
     io.emit('weight', latestWeight);
 });
 
-setInterval(async () => {
-    const latestWeight = await Weight.getLatest();
-    io.emit('weight', latestWeight);
-}, 1000);
-
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

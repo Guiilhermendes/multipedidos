@@ -89,7 +89,7 @@
 
         async function autoFetchWeights() {
             await fetchWeights(currentPage);
-            setTimeout(autoFetchWeights, 5000);
+            setTimeout(autoFetchWeights, 1000);
         }
 
         autoFetchWeights();
