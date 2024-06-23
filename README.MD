@@ -71,37 +71,41 @@ Esta aplicação se comunica com um simulador de balança através de uma porta 
 
 O projeto está organizado da seguinte forma:
 
-multipedidos/
-├── node_modules/
-├── public/
-│   ├── index.html
-│   └── styles.css
-├── src/
-│   ├── controllers/
-│   │   └── weightController.js
-│   ├── models/
-│   │   ├── supplierModel.js
-│   │   └── weightModel.js
-│   ├── routes/
-│   │   └── weightRoutes.js
-│   ├── services/
-│   │   └── serialService.js
-│   ├── index.js
-│   └── database.js
-├── package.json
-└── README.md
+    ```bash
+    multipedidos/
+    ├── node_modules/
+    ├── public/
+    │   ├── index.html
+    │   └── styles.css
+    ├── src/
+    │   ├── controllers/
+    │   │   └── weightController.js
+    │   ├── models/
+    │   │   ├── supplierModel.js
+    │   │   └── weightModel.js
+    │   ├── routes/
+    │   │   └── weightRoutes.js
+    │   ├── services/
+    │   │   └── serialService.js
+    │   ├── index.js
+    │   └── database.js
+    ├── package.json
+    └── README.md
+    ```
 
 ## Fluxograma da Aplicação
 
-Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
-        -> Iniciar servidor Node.js
-        -> Configurar conexão com banco de dados MySQL
-        -> Configurar comunicação com porta COM (serial)
-        -> Aguardar dados de peso da balança
-        -> Receber dados de peso -> Salvar no banco de dados
-        -> Enviar dados atualizados para o frontend via WebSocket
-        -> Frontend recebe dados -> Exibir em tempo real
-        -> Fim
+    ```bash
+    Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
+            -> Iniciar servidor Node.js
+            -> Configurar conexão com banco de dados MySQL
+            -> Configurar comunicação com porta COM (serial)
+            -> Aguardar dados de peso da balança
+            -> Receber dados de peso -> Salvar no banco de dados
+            -> Enviar dados atualizados para o frontend via WebSocket
+            -> Frontend recebe dados -> Exibir em tempo real
+            -> Fim
+    ```
 
 ## Autor
 
