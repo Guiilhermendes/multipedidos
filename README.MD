@@ -44,14 +44,23 @@ Esta aplicação se comunica com um simulador de balança através de uma porta 
         supplier_id INT,
         FOREIGN KEY (supplier_id) REFERENCES suppliers(id)
     );
+
+    INSERT INTO suppliers (name, description) VALUES ('Fornecedor A', 'Fornecedor de maquinas pesadas');
+    INSERT INTO suppliers (name, description) VALUES ('Fornecedor B', 'Fornecedor de maquinas leves');
     ```
 
-4. Inicie o servidor:
+4. Inicie o simulador:
+    ```bash
+    npm simulation
+    ```
+    (Obs: A aplicação foi feita no sistema operacional MacOS, o software de emulação `freevirtualserialports` não é compativel com o mesmo. O `socket` que também serve para criar uma porta COM virtual e simular a comunicação serial entre aplicações pode vir a não funcionar como deveria. Foi criado então um script que simula essa comunicação, e para utiliza-la é só rodar o comando acima)
+
+5. Inicie o servidor:
     ```bash
     npm start
     ```
 
-5. Abra o navegador e acesse `http://localhost:3000`.
+6. Abra o navegador e acesse `http://localhost:3000`.
 
 ## Uso
 
