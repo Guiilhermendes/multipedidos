@@ -67,6 +67,42 @@ Esta aplicação se comunica com um simulador de balança através de uma porta 
 - A aplicação se conectará à porta COM1 para receber os dados simulados de peso.
 - Os dados serão exibidos em tempo real na página HTML com paginação de 20 itens por página.
 
+## Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+multipedidos/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── styles.css
+├── src/
+│   ├── controllers/
+│   │   └── weightController.js
+│   ├── models/
+│   │   ├── supplierModel.js
+│   │   └── weightModel.js
+│   ├── routes/
+│   │   └── weightRoutes.js
+│   ├── services/
+│   │   └── serialService.js
+│   ├── index.js
+│   └── database.js
+├── package.json
+└── README.md
+
+## Fluxograma da Aplicação
+
+Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
+        -> Iniciar servidor Node.js
+        -> Configurar conexão com banco de dados MySQL
+        -> Configurar comunicação com porta COM (serial)
+        -> Aguardar dados de peso da balança
+        -> Receber dados de peso -> Salvar no banco de dados
+        -> Enviar dados atualizados para o frontend via WebSocket
+        -> Frontend recebe dados -> Exibir em tempo real
+        -> Fim
+
 ## Autor
 
 Guilherme Mendes
