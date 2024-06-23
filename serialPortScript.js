@@ -3,7 +3,6 @@ const net = require('net');
 const server = net.createServer((socket) => {
   console.log('Cliente conectado');
 
-  // Simular envio de dados periódicos da balança
   setInterval(() => {
     const weightData = `${Math.random() * 100}\n`;
     console.log(`Enviando dados: ${weightData}`);
