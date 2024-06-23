@@ -93,7 +93,6 @@ O projeto está organizado da seguinte forma:
     ```
 
 ## Fluxograma da Aplicação
-    ```
     Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
             -> Iniciar servidor Node.js
             -> Configurar conexão com banco de dados MySQL
@@ -103,7 +102,6 @@ O projeto está organizado da seguinte forma:
             -> Enviar dados atualizados para o frontend via WebSocket
             -> Frontend recebe dados -> Exibir em tempo real
             -> Fim
-    ```
 
 ## Autor
 
