@@ -1,4 +1,3 @@
-// src/controllers/weightController.js
 const Weight = require('../models/weightModel');
 
 exports.getWeights = async (req, res) => {

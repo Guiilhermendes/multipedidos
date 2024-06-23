@@ -1,4 +1,3 @@
-// src/models/weightModel.js
 const db = require('../database');
 
 class Weight {
