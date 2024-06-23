@@ -32,10 +32,9 @@
     <script>
         const socket = io();
         let currentPage = 1;
-        let totalPages = 1; // Variável para armazenar o número total de páginas
+        let totalPages = 1;
         const pageSize = 20;
 
-        // Função para formatar a data no formato DD-MM-YYYY HH:mm
         function formatDate(timestamp) {
             const date = new Date(timestamp);
             const day = date.getDate().toString().padStart(2, '0');
@@ -51,7 +50,7 @@
             const row = weightsTable.insertRow(0);
             row.insertCell(0).innerText = weight.id;
             row.insertCell(1).innerText = weight.weight;
-            row.insertCell(2).innerText = formatDate(weight.timestamp); // Formata a data aqui
+            row.insertCell(2).innerText = formatDate(weight.timestamp);
             row.insertCell(3).innerText = weight.supplier;
         });
 
@@ -64,14 +63,14 @@
                 const row = weightsTable.insertRow();
                 row.insertCell(0).innerText = weight.id;
                 row.insertCell(1).innerText = weight.weight;
-                row.insertCell(2).innerText = formatDate(weight.timestamp); // Formata a data aqui
+                row.insertCell(2).innerText = formatDate(weight.timestamp);
                 row.insertCell(3).innerText = weight.supplier;
             });
 
             document.getElementById('pageInfo').innerText = `Página ${currentPage} de ${data.totalPages}`;
             document.getElementById('pageDetails').innerText = `Mostrando ${data.weights.length} de ${data.total} itens por página (${pageSize} itens por página)`;
 
-            totalPages = data.totalPages; // Atualiza o número total de páginas
+            totalPages = data.totalPages;
         }
 
         document.getElementById('prevPage').addEventListener('click', () => {
@@ -88,13 +87,11 @@
             }
         });
 
-        // Função para atualizar automaticamente a cada 5 segundos
         async function autoFetchWeights() {
-            await fetchWeights(currentPage); // Chama fetchWeights com a página atual
-            setTimeout(autoFetchWeights, 5000); // Aguarda 5 segundos e chama novamente
+            await fetchWeights(currentPage);
+            setTimeout(autoFetchWeights, 5000);
         }
 
-        // Inicia a atualização automática ao carregar a página
         autoFetchWeights();
     </script>
 </body>
