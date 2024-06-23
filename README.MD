@@ -93,7 +93,7 @@ O projeto está organizado da seguinte forma:
     ```
 
 ## Fluxograma da Aplicação
-    ```bash
+    ```
     Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
             -> Iniciar servidor Node.js
             -> Configurar conexão com banco de dados MySQL
