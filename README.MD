@@ -70,7 +70,6 @@ Esta aplicação se comunica com um simulador de balança através de uma porta 
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
-
     ```bash
     multipedidos/
     ├── node_modules/
@@ -94,7 +93,6 @@ O projeto está organizado da seguinte forma:
     ```
 
 ## Fluxograma da Aplicação
-
     ```bash
     Início -> Configurar ambiente (Node.js, MySQL, Porta COM)
             -> Iniciar servidor Node.js
