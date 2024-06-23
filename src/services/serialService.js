@@ -4,6 +4,11 @@ const db = require('../database');
 const net = require('net');
 const pathName = 12345
 
+// Uncomment if using any COM tool
+// const port = new SerialPort({path: pathName, baudRate: 9600 });
+// const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }));
+
+// Comment if using any COM tool"
 const parser = net.createConnection({ port: pathName }, () => {
     console.log('Connected to the scale simulation server');
 });
