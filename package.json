@@ -1,0 +1,19 @@
+{
+  "name": "multipedidos",
+  "version": "1.0.0",
+  "description": "Projeto Técnico Multipedidos",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "simulation": "node serialPortScript.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "node-pty": "^1.0.0",
+    "serialport": "^10.5.0",
+    "socket.io": "^4.1.3"
+  },
+  "author": "Guilherme Mendes",
+  "license": "ISC"
+}
